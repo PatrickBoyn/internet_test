@@ -8,6 +8,10 @@ def message(message):
 def is_connected(server):
     root = tkinter.Tk()
     root.withdraw()
+    
+    # This script was found on Stack Overflow. 
+    # The original was written in Python 2, and with print statements.
+    # I thought a popup would be more fun.
     try:
         host = socket.gethostbyname(server)
         socket.create_connection((host, 80), 2)
@@ -19,4 +23,4 @@ def is_connected(server):
         return False
 
 # This must be both a real website and an active website. 
-print(is_connected('www.cnn.com'))
+print(is_connected('www.github.com'))
