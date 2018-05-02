@@ -1,13 +1,20 @@
 import socket
+import tkinter
+from tkinter import messagebox
+
+def message(message):
+    messagebox.showinfo('Connection?', message)
 
 def is_connected(server):
+    root = tkinter.Tk()
+    root.withdraw()
     try:
         host = socket.gethostbyname(server)
         s = socket.create_connection((host, 80), 2)
-        print("There is a connection.")
+        message('You are connected.')
         return True
     except:
-        print("Sorry you are not connected.")
+        message('You are not connected. ')
         return False
 
 print(is_connected('www.github.com'))
