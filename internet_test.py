@@ -10,11 +10,13 @@ def is_connected(server):
     root.withdraw()
     try:
         host = socket.gethostbyname(server)
-        s = socket.create_connection((host, 80), 2)
+        socket.create_connection((host, 80), 2)
+
         message('You are connected. ')
         return True
     except:
         message('You are not connected. ')
         return False
 
-print(is_connected('www.github.com'))
+# This must be both a real website and an active website. 
+print(is_connected('www.cnn.com'))
