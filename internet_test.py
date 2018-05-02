@@ -2,8 +2,6 @@ import socket
 import tkinter
 from tkinter import messagebox
 
-def message(message):
-    messagebox.showinfo('Connected?', message)
 
 def is_connected(server):
     root = tkinter.Tk()
@@ -23,5 +21,11 @@ def is_connected(server):
         message('You are not connected. ')
         return False
 
-# This must be both a real website and an active website. 
-print(is_connected('www.github.com'))
+
+def message(message):
+    messagebox.showinfo('Connected?', message)
+
+
+if __name__ == "__main__":
+    # This must be both a real website and an active website. 
+    is_connected('www.github.com')
