@@ -3,7 +3,7 @@ import tkinter
 from tkinter import messagebox
 
 def message(message):
-    messagebox.showinfo('Connection?', message)
+    messagebox.showinfo('Connected?', message)
 
 def is_connected(server):
     root = tkinter.Tk()
@@ -11,7 +11,7 @@ def is_connected(server):
     try:
         host = socket.gethostbyname(server)
         s = socket.create_connection((host, 80), 2)
-        message('You are connected.')
+        message('You are connected. ')
         return True
     except:
         message('You are not connected. ')
