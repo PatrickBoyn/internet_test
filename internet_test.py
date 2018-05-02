@@ -11,7 +11,8 @@ def is_connected(server):
     
     # This script was found on Stack Overflow. 
     # The original was written in Python 2, and with print statements.
-    # I thought a popup would be more fun.
+    # I thought a popup would be more fun. I also put it all in functions
+    # So that the program could be more modular. 
     try:
         host = socket.gethostbyname(server)
         socket.create_connection((host, 80), 2)
