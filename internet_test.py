@@ -1,4 +1,4 @@
--import socket
+import socket
 
 def is_connected(server):
     try:
@@ -10,4 +10,4 @@ def is_connected(server):
         print("Sorry you are not connected.")
         return False
 
-print(is_connected('www.yahoo.com'))
+print(is_connected('www.github.com'))
